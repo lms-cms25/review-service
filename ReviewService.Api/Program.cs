@@ -32,4 +32,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Start page öppnar Swagger
+app.MapGet("/", () => Results.Redirect("/swagger"));
+
 app.Run();
